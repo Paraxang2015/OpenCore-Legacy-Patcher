@@ -62,9 +62,6 @@ class ModernWireless(BaseHardware):
                     "/usr/libexec": {
                         "wifip2pd": f"13.7.2-{self._xnu_major}",
                     },
-                    "/System/Library/CoreServices": {
-                        **({ "WiFiAgent.app": "14.7.2" } if self._xnu_major >= os_data.sequoia else {}),
-                    },
                 },
                 PatchType.MERGE_SYSTEM_VOLUME: {
                     "/System/Library/PrivateFrameworks": {
