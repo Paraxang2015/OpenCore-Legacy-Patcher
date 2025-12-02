@@ -88,7 +88,7 @@ class ModernWireless(BaseHardware):
                 },
                 PatchType.MERGE_SYSTEM_VOLUME: {
                     "/System/Library/Frameworks": {
-                        "CoreWLAN.framework": f"13.7.2-{self._xnu_major}",
+                        **({ "CoreWLAN.framework": f"13.7.2-{self._xnu_major}" } if self._xnu_major == os_data.sonoma else {}),
                     },
                     "/System/Library/PrivateFrameworks": {
                         "CoreWiFi.framework":       f"13.7.2-{self._xnu_major}",
