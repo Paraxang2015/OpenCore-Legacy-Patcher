@@ -1,3 +1,4 @@
+
 """
 products.py: Parse products from Software Update Catalog
 """
@@ -28,7 +29,7 @@ class AppleDBProducts:
     def __init__(
         self,
         global_constants: constants.Constants,
-        max_install_assistant_version: os_data = os_data.sequoia,
+        max_install_assistant_version: os_data = os_data.tahoe,
     ) -> None:
         self.constants: constants.Constants = global_constants
 
